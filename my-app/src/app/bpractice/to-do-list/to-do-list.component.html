@@ -1,0 +1,10 @@
+<input type="text" id="FruitName" [(ngModel)]="inputValue">
+<button class="addFruitBtn" type="submit" (click)="getInputVal()">Add to List</button>
+
+<ul>
+    <span>{{newArr.length}}</span>
+  <li *ngFor="let item of newArr; let index = index" style="display: flex;">
+    <span>{{ item }}</span>
+    <button (click)="delete(index)">Delete item</button>
+  </li>
+</ul>
